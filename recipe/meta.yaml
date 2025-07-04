@@ -15,11 +15,21 @@ build:
 requirements:
   build:
     - {{ compiler('go-nocgo') }}
+    - python
     - go-licenses
+  host:
+    - setuptools
+    - python
+    - pip
+  run:
+    - python
 
 test:
   commands:
     - jsonnet --help
+  python:
+    imports:
+      - _gojsonnet
 
 about:
   home: https://github.com/google/go-jsonnet

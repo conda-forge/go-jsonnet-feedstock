@@ -6,4 +6,5 @@ go build -buildmode=pie -trimpath -o=${PREFIX}/bin/jsonnet -ldflags="-s -w" ./cm
 go build -buildmode=pie -trimpath -o=${PREFIX}/bin/jsonnetfmt -ldflags="-s -w" ./cmd/jsonnetfmt
 go build -buildmode=pie -trimpath -o=${PREFIX}/bin/jsonnet-lint -ldflags="-s -w" ./cmd/jsonnet-lint
 go build -buildmode=pie -trimpath -o=${PREFIX}/bin/jsonnet-deps -ldflags="-s -w" ./cmd/jsonnet-deps
+python -m pip install . -vv --no-build-isolation --no-deps
 go-licenses save . --save_path=license-files
